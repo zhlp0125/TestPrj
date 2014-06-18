@@ -116,7 +116,7 @@ public class ExportPdfAction extends ActionSupport implements
 		if (jasperPrint != null) {
 			JasperPrintManager.printReport(jasperPrint, true);
 		}
-		return NONE;
+		return SUCCESS;
 	}
 
 	public ExportPdfForm getForm() {

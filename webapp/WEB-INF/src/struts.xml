@@ -41,6 +41,7 @@
 		</action>
 		<action name="PrintPdfAction" class="com.test.web.action.ExportPdfAction"
 			method="print">
+			<result name="success">/jsp/_blank.jsp</result>
 		</action>
 	</package>
 </struts>
