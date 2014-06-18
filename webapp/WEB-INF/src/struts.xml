@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<constant name="struts.devMode" value="true" />
+
+	<constant name="struts.action.extension" value=",action," />
+
+	<constant name="struts.custom.i18n.resources" value="ApplicationResource" />
+
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+
+	<constant name="struts.ui.theme" value="simple" />
+	<package name="default" extends="struts-default">
+
+		<default-action-ref name="index" />
+
+		<global-results>
+			<result name=""></result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping result="error" exception="java.lang.Exception">
+			</exception-mapping>
+		</global-exception-mappings>
+
+		<action name="">
+			<result name="success">/jsp/exportPdf.jsp</result>
+		</action>
+
+		<action name="ExportPdfAction" class="com.test.web.action.ExportPdfAction"
+			method="export">
+		</action>
+		<action name="PreviewPdfAction" class="com.test.web.action.ExportPdfAction"
+			method="applet">
+		</action>
+		<action name="PrintPdfAction" class="com.test.web.action.ExportPdfAction"
+			method="print">
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,5 @@
+keystore"file:mytest.store","JKS"; 
+grantsignedBy"mbq" 
+{ 
+permission java.io.FilePermission"<<ALLFILES>>","read"; 
+}; 
