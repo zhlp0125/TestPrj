@@ -49,7 +49,7 @@
 				.open(
 						'',
 						'open_window',
-						'width=1000,height=800,location=no,directories=no,status=yes,menubar=no,resizable=yes');
+						'width=500,height=400,location=no,directories=no,status=yes,menubar=no,resizable=yes');
 		open_window.focus();
 		open_window.document
 				.write('<APPLET CODE = "JRPrinterApplet.class" CODEBASE = "applets" ARCHIVE = "jasperreports-applet-5.6.0.jar,commons-logging-1.1.jar,commons-collections-3.2.1.jar,print.jar,jasperreports-javaflow-5.6.0.jar" WIDTH = "300" HEIGHT = "200">');
@@ -76,11 +76,12 @@
 		open_window.focus();
 		open_window.document.write("<html>");
 		open_window.document.write("<head><title>");
-		open_window.document.write("</title></head>");
+		open_window.document
+				.write("</title><script>document.onreadystatechange=function(){if(document.readystate==\"complete\"){widow.close();}}<\/script></head>");
 		open_window.document.write("<body>");
 		open_window.document
 				.write("<span style=\"font-size:18pt;color:navy\"><b>");
-		open_window.document.write("Please wait...");
+		open_window.document.write("Now Printing...");
 		open_window.document.write("</b></span>");
 		open_window.document.write("</body></html>");
 		open_window.document.close();
